@@ -1,121 +1,83 @@
-Botnet Simulator
-Overview
+# ⏳ Time Capsule Messaging Platform
 
-The Botnet Simulator is a web application that allows users to simulate the creation, expansion, and mitigation of a botnet. This platform provides a visual representation of how botnets operate, demonstrating how they can propagate across a network, launch attacks like DDoS, and how these threats can be mitigated through various strategies. The goal is to offer a tool for ethical hackers, security researchers, and educators to understand and explore botnet behavior in a controlled environment.
-Features
+Welcome to the **Time Capsule Messaging Platform**! This web application allows users to send messages that will be delivered to recipients at a future date. Ideal for sending reminders, birthday wishes, or any messages that you want to time-stamp for future delivery. The platform provides a secure and user-friendly interface to manage and schedule messages.
 
-    Botnet Visualization: Displays a dynamic map of bots within the network, showing their status and activity.
-    Attack Simulation: Launches simulated attacks (e.g., DDoS, Spam) from compromised bots against specified targets.
-    Mitigation Controls: Implements strategies to mitigate or neutralize active bots in the network.
-    Interactive Frontend: Provides a user-friendly interface for monitoring the botnet and executing controls.
-    Backend API: Powers the simulation logic and handles requests from the frontend.
+## ✨ Features
 
-Project Structure
+- 📅 **Scheduled Messaging**: Users can compose messages and set a future delivery date.
+- 🔒 **Secure Storage**: Messages are encrypted and securely stored until delivery.
+- 🛠️ **User Management**: Users can create accounts, log in, and manage their scheduled messages.
+- 📧 **Notification System**: Recipients receive notifications when they receive a message.
+- 🔄 **User Dashboard**: View and manage all scheduled messages in a personal dashboard.
 
-arduino
+## 🛠️ Technology Stack
 
-botnet-simulator/
-├── backend/
-│   ├── app/
-│   │   ├── __init__.py
-│   │   ├── models.py
-│   │   ├── routes.py
-│   │   └── utils.py
-│   ├── config.py
-│   ├── requirements.txt
-│   └── run.py
-├── frontend/
-│   ├── public/
-│   │   ├── index.html
-│   └── src/
-│       ├── components/
-│       │   ├── BotnetMap.js
-│       │   ├── AttackControls.js
-│       │   └── MitigationControls.js
-│       ├── App.js
-│       ├── index.js
-│       └── styles.css
-└── README.md
+**Backend**:
+- 🐍 **Python**
+- 🔥 **Flask** (for handling API requests)
+- 🛡️ **Flask-Security** (for user authentication and authorization)
+- 💾 **SQLite** (for data storage)
 
-Getting Started
-Prerequisites
+**Frontend**:
+- ⚛️ **React.js**
+- 🎨 **CSS** (for styling)
 
-    Python 3.8+
-    Node.js 14+
-    npm (or yarn)
+## 🚀 Getting Started
 
-Setup Instructions
-1. Backend Setup
+Follow these steps to set up the project locally.
 
-    Navigate to the backend directory:
+### Prerequisites
 
-    bash
+- **Python 3.x**
+- **Node.js & npm**
 
-cd backend/
+### Installation
 
-Install the required Python packages:
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/Apatoma/Time-Capsule-Messaging-Platform.git
+    cd Time-Capsule-Messaging-Platform
+    ```
 
-bash
-
-pip install -r requirements.txt
-
-Run the backend server:
-
-bash
-
+2. **Set up the backend**:
+    ```bash
+    cd backend
+    pip install -r requirements.txt
     python run.py
+    ```
 
-    The server will start on http://localhost:5000.
-
-2. Frontend Setup
-
-    Navigate to the frontend directory:
-
-    bash
-
-cd frontend/
-
-Install the required npm packages:
-
-bash
-
-npm install
-
-Run the frontend development server:
-
-bash
-
+3. **Set up the frontend**:
+    ```bash
+    cd frontend
+    npm install
     npm start
+    ```
 
-    The frontend will be accessible at http://localhost:3000.
+4. **Access the application**:
+    - Open your browser and navigate to `http://localhost:3000` to interact with the application.
 
-Connecting Frontend and Backend
+## 📝 Usage
 
-Ensure that both the backend (Flask) and frontend (React) servers are running. The React frontend will make API calls to the Flask backend at http://localhost:5000. If necessary, you can configure a proxy in the React app's package.json to route requests correctly.
-Initializing the Database
+- **Create an Account**: Register for an account to start using the platform.
+- **Compose a Message**: Write a message and set a delivery date in the future.
+- **Manage Messages**: Use the dashboard to view, edit, or cancel scheduled messages.
+- **Receive Messages**: Messages will be delivered to the recipient's inbox on the specified date.
 
-The database will be automatically created when the backend server is started. It will store information about bots, attacks, and their statuses. You can interact with the API endpoints to create bots, start attacks, and apply mitigation strategies.
-API Endpoints
-Bots
+## 🛤️ Future Enhancements
 
-    GET /bots: Retrieve the list of all bots in the network.
-    POST /create_bot: Create a new bot in the network.
-    POST /mitigate_bot: Mitigate a specific bot by ID.
+- 📅 **Recurring Messages**: Add functionality for sending recurring messages.
+- 🌐 **Multi-language Support**: Implement support for multiple languages.
+- 🔄 **Message Templates**: Provide users with message templates for common scenarios.
+- 🔔 **Enhanced Notifications**: Integrate with SMS or email services for notifications.
 
-Attacks
+## 🧑‍💻 Contributing
 
-    POST /start_attack: Start an attack from a specific bot against a target.
+Contributions are welcome! Please fork the repository, make your changes, and submit a pull request.
 
-Future Enhancements
+## 📄 License
 
-    Real-time Traffic Analysis: Visualize the traffic generated by bots in real-time.
-    Advanced Attack Types: Implement additional types of attacks, such as ransomware or phishing simulations.
-    Machine Learning for Mitigation: Introduce machine learning algorithms to automatically detect and mitigate bot activity.
-    Detailed Post-Attack Reports: Generate comprehensive reports after each simulated attack, including visual graphs and statistics.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-Contributing
+---
 
-Contributions are welcome! Please fork this repository, make your changes, and submit a pull request.
-License
-
-This project is licensed under the MIT License.
+Made with ❤️ by [Alejandro](https://github.com/Apatoma)
